@@ -11,6 +11,7 @@ import * as _ from 'lodash';
 
 export class AppComponent {
   cover = '';
+  title = '';
   bookService;
 
   constructor(
@@ -23,6 +24,7 @@ export class AppComponent {
     this.bookService.getBookDetails(isbn.target.value).subscribe((data) => {
       console.log(data['ISBN:' + isbn.target.value])
       this.cover = data['ISBN:' + isbn.target.value].cover.large;
+      this.title = data['ISBN:' + isbn.target.value].title;
       isbn.target.value = '';
     });
   }
