@@ -10,16 +10,20 @@ import * as _ from 'lodash';
 })
 
 export class AppComponent {
+
+  // Initialize variables
   cover = '';
   title = '';
   bookService;
 
+  // Constructor
   constructor(
     apiService: ApiService
   ) {
     this.bookService = apiService;
   }
 
+  // Get current isbn book information from service.
   findBook(isbn) {
     this.bookService.getBookDetails(isbn.target.value).subscribe((data) => {
       console.log(data['ISBN:' + isbn.target.value])
