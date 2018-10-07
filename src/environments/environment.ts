@@ -3,7 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  // Firebase API
+  firebase: {
+    apiKey: "AIzaSyBT5zl_6KUQtyXHYf5tsaBg4zUwY2Xg0z0",
+    authDomain: "book-it-test-eb8b1.firebaseapp.com",
+    databaseURL: "https://book-it-test-eb8b1.firebaseio.com",
+    projectId: "book-it-test-eb8b1",
+    storageBucket: "book-it-test-eb8b1.appspot.com",
+    messagingSenderId: "846897505343"
+  },
+
+  // Open Library API URL.
+  openLibrary: 'https://openlibrary.org/api/books'
+  
 };
 
 /*
